@@ -1,5 +1,4 @@
 import React from 'react';
-import './style.css';
 import { TableComp } from './TableComp';
 import { ReactNode } from './ReactNode';
 import { Parent } from './passingChildren/Parent';

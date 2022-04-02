@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './style.module.css';
 
 export const TableComp = ({ data, comp }) => {
   // const { data: data, comp } = props;
@@ -6,7 +7,7 @@ export const TableComp = ({ data, comp }) => {
   return (
     <>
       {comp}
-      <table>
+      <table className={styles.table}>
         <tr>
           <th>Name</th>
           <th>Age</th>

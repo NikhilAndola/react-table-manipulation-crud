@@ -1,0 +1,18 @@
+h1,
+p {
+  font-family: Lato;
+}
+
+table {
+  border: 2px solid forestgreen;
+  width: 80vw;
+  height: 40vh;
+}
+
+/* th {
+  border-bottom: 1px solid black;
+} */
+
+td {
+  text-align: center;
+}

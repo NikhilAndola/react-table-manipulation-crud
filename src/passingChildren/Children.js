@@ -1,5 +1,5 @@
 import React from 'react';
 
-export const Chilren = () => {
-  return <>Am children</>;
+export const Children = (props) => {
+  return <>{props.children}</>;
 };

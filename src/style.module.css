@@ -16,3 +16,11 @@ table {
 td {
   text-align: center;
 }
+
+.textClr {
+  color: yellow;
+}
+
+.bgClr {
+  background-color: aqua;
+}

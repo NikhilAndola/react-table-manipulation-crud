@@ -1,5 +1,5 @@
 import React from 'react';
 
 export const Hello = () => {
-  return <>Hello Hello Hello</>;
+  return <>This component is contained inside children.</>;
 };

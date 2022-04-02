@@ -5,8 +5,8 @@ p {
 
 table {
   border: 2px solid forestgreen;
-  width: 80vw;
-  height: 40vh;
+  width: 400px;
+  height: 200px;
 }
 
 /* th {

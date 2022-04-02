@@ -1,32 +1,31 @@
 import React from 'react';
 import './style.css';
+import { TableComp } from './TableComp';
+import { ReactNode } from './ReactNode';
+import { Parent } from './passingChildren/Parent';
 
 export default function App() {
   const data = [
     { name: 'Anom', age: 19, gender: 'Male' },
     { name: 'Megha', age: 19, gender: 'Female' },
-    { name: 'Subham', age: 25, gender: 'Male' },
+    { name: 'Nikhil', age: 25, gender: 'Male' },
+    { name: 'Subham', age: 23, gender: 'Male' },
+    { name: 'Nilesh', age: 24, gender: 'Male' },
+    { name: 'Sachin', age: 27, gender: 'Male' },
+    { name: 'Rohit', age: 28, gender: 'Male' },
   ];
 
   return (
-    <div>
-      <h1>Basic table in React js</h1>
+    <>
+      <div style={{ overflowY: 'scroll', height: '200px' }}>
+        <h1>Basic table in React js</h1>
 
-      <table>
-        <tr>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Gender</th>
-        </tr>
+        {/* Passing whole (React Node)component as a prop */}
+        <TableComp data={data} comp={<ReactNode data={data} />} />
 
-        {data.map((item, index) => (
-          <tr>
-            <td>{item.name}</td>
-            <td>{item.age}</td>
-            <td>{item.gender}</td>
-          </tr>
-        ))}
-      </table>
-    </div>
+        {/* props.children in react */}
+        <Parent />
+      </div>
+    </>
   );
 }

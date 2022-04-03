@@ -3,9 +3,11 @@ import styles from './tabstyle.module.css';
 import clsx from 'clsx';
 import data from '../mock.data.json';
 import { nanoid } from 'nanoid';
+import ReadOnlyRow from './components/ReadOnlyRow';
 
 export const TableCrud = () => {
   const [contacts, setContacts] = useState(data);
+  console.log(contacts);
   const [addFormData, setAddFormData] = useState({
     fullName: '',
     address: '',
@@ -24,13 +26,16 @@ export const TableCrud = () => {
 
   const handleAddFormSubmit = (e) => {
     e.preventDefault();
-    const newContacts = {
+    const newContact = {
       id: nanoid(),
       fullName: addFormData.fullName,
       address: addFormData.address,
       phoneNumber: addFormData.phoneNumber,
       email: addFormData.email,
     };
+
+    const newContacts = [...contacts, newContact];
+    setContacts(newContacts);
   };
 
   return (
@@ -56,26 +61,13 @@ export const TableCrud = () => {
           </thead>
           <tbody>
             {contacts.map((item, key) => (
-              <tr key={key}>
-                <td className={clsx(styles.tdth, styles.tablebody)}>
-                  {item.fullName}
-                </td>
-                <td className={clsx(styles.tdth, styles.tablebody)}>
-                  {item.address}
-                </td>
-                <td className={clsx(styles.tdth, styles.tablebody)}>
-                  {item.phoneNumber}
-                </td>
-                <td className={clsx(styles.tdth, styles.tablebody)}>
-                  {item.email}
-                </td>
-              </tr>
+              <ReadOnlyRow item={item} key={key} />
             ))}
           </tbody>
         </table>
 
         <h2>Add a contact</h2>
-        <form>
+        <form onSubmit={handleAddFormSubmit}>
           <input
             type="text"
             name="fullName"

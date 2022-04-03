@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './tabstyle.module.css';
+import clsx from 'clsx';
 
 export const TableCrud = () => {
   return (
@@ -9,18 +10,32 @@ export const TableCrud = () => {
         <table className={styles.table}>
           <thead>
             <tr>
-              <th className={styles.tdth}>Name</th>
-              <th className={styles.tdth}>Address</th>
-              <th className={styles.tdth}>Phone No</th>
-              <th className={styles.tdth}>Email</th>
+              <th
+                className={clsx(styles.tdth, { [styles.tableheading]: true })}
+              >
+                Name
+              </th>
+              <th className={clsx(styles.tdth, styles.tableheading)}>
+                Address
+              </th>
+              <th className={clsx(styles.tdth, styles.tableheading)}>
+                Phone No
+              </th>
+              <th className={clsx(styles.tdth, styles.tableheading)}>Email</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td className={styles.tdth}>Nick</td>
-              <td className={styles.tdth}>3b2 mohali</td>
-              <td className={styles.tdth}>999-223-4567</td>
-              <td className={styles.tdth}>Nick@gmail.com</td>
+              <td className={clsx(styles.tdth, styles.tablebody)}>Nick</td>
+              <td className={clsx(styles.tdth, styles.tablebody)}>
+                3b2 mohali
+              </td>
+              <td className={clsx(styles.tdth, styles.tablebody)}>
+                999-223-4567
+              </td>
+              <td className={clsx(styles.tdth, styles.tablebody)}>
+                Nick@gmail.com
+              </td>
             </tr>
           </tbody>
         </table>

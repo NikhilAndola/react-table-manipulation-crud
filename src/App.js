@@ -18,7 +18,7 @@ export default function App() {
   return (
     <>
       <div
-        style={{ overflowY: 'scroll', height: '300px', marginBottom: '50px' }}
+        style={{ overflowY: 'scroll', height: '250px', marginBottom: '50px' }}
       >
         <h1>Basic table in React js</h1>
 

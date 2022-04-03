@@ -3,11 +3,12 @@
   flex-direction: column;
   gap: 10px;
   padding: 1rem;
+  font-size: 0.8rem;
 }
 
 .table {
   border-collapse: collapse;
-  width: 100%;
+  width: 90%;
 }
 
 .tdth {
@@ -17,10 +18,10 @@
   font-size: 32px;
 }
 
-th {
+.tableheading {
   background-color: cyan;
 }
 
-td {
+.tablebody {
   background-color: hsl(180, 53%, 86%);
 }

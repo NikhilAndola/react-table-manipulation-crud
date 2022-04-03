@@ -19,6 +19,7 @@ export default function App() {
     <>
       {/* /** * * * **/}
       <TableCrud />
+      <hr />
       <div
         style={{ overflowY: 'scroll', height: '250px', marginBottom: '50px' }}
       >

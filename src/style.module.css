@@ -3,7 +3,7 @@ p {
   font-family: Lato;
 }
 
-table {
+.table {
   border: 2px solid forestgreen;
   width: 400px;
   height: 200px;

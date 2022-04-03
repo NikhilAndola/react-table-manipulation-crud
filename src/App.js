@@ -16,7 +16,9 @@ export default function App() {
 
   return (
     <>
-      <div style={{ overflowY: 'scroll', height: '200px' }}>
+      <div
+        style={{ overflowY: 'scroll', height: '200px', marginBottom: '50px' }}
+      >
         <h1>Basic table in React js</h1>
 
         {/* Passing whole (React Node)component as a prop */}
@@ -25,6 +27,22 @@ export default function App() {
         {/* props.children in react */}
         <Parent />
       </div>
+
+      <h2> Making table crud app</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Hello</th>
+            <th>Hello</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Hey</td>
+            <td>Hey</td>
+          </tr>
+        </tbody>
+      </table>
     </>
   );
 }

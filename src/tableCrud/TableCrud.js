@@ -28,7 +28,7 @@ export const TableCrud = () => {
             </tr>
           </thead>
           <tbody>
-            {data.map((item, key) => (
+            {contacts.map((item, key) => (
               <tr key={key}>
                 <td className={clsx(styles.tdth, styles.tablebody)}>
                   {item.fullName}
@@ -46,6 +46,8 @@ export const TableCrud = () => {
             ))}
           </tbody>
         </table>
+
+        <h2>Add a contact</h2>
       </div>
     </>
   );

@@ -17,6 +17,8 @@ export default function App() {
 
   return (
     <>
+      {/* /** * * * **/}
+      <TableCrud />
       <div
         style={{ overflowY: 'scroll', height: '250px', marginBottom: '50px' }}
       >
@@ -28,8 +30,6 @@ export default function App() {
         {/* props.children in react */}
         <Parent />
       </div>
-      {/* /** * * * **/}
-      <TableCrud />
     </>
   );
 }

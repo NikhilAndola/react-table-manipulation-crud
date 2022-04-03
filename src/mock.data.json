@@ -33,5 +33,12 @@
     "address": "99 blue acres",
     "phoneNumber": "3231-962-7516",
     "email": "raymon.edwards@email.com"
+  },
+  {
+    "id": 5,
+    "fullName": "New contact",
+    "address": "99 blue acres",
+    "phoneNumber": "3231-962-7516",
+    "email": "raymon.edwards@email.com"
   }
 ]

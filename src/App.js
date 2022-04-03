@@ -2,6 +2,7 @@ import React from 'react';
 import { TableComp } from './TableComp';
 import { ReactNode } from './ReactNode';
 import { Parent } from './passingChildren/Parent';
+import { TableCrud } from './tableCrud/TableCrud';
 
 export default function App() {
   const data = [
@@ -17,7 +18,7 @@ export default function App() {
   return (
     <>
       <div
-        style={{ overflowY: 'scroll', height: '200px', marginBottom: '50px' }}
+        style={{ overflowY: 'scroll', height: '300px', marginBottom: '50px' }}
       >
         <h1>Basic table in React js</h1>
 
@@ -27,22 +28,7 @@ export default function App() {
         {/* props.children in react */}
         <Parent />
       </div>
-
-      <h2> Making table crud app</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Hello</th>
-            <th>Hello</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Hey</td>
-            <td>Hey</td>
-          </tr>
-        </tbody>
-      </table>
+      <TableCrud />
     </>
   );
 }

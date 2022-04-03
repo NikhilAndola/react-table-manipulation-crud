@@ -6,14 +6,15 @@ p {
 .table {
   border: 2px solid forestgreen;
   width: 400px;
-  height: 200px;
+  height: 250px;
+  border-collapse: collapse;
 }
 
 /* th {
   border-bottom: 1px solid black;
 } */
 
-td {
+.td {
   text-align: center;
 }
 

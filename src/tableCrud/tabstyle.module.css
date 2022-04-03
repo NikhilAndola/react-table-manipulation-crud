@@ -1,0 +1,26 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.tdth {
+  border: 1px solid orange;
+  text-align: left;
+  padding: 8px;
+  font-size: 32px;
+}
+
+th {
+  background-color: cyan;
+}
+
+td {
+  background-color: hsl(180, 53%, 86%);
+}

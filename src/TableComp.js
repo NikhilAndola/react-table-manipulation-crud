@@ -20,9 +20,9 @@ export const TableComp = ({ data, comp }) => {
 
         {data.map((item, index) => (
           <tr key={index}>
-            <td>{item.name}</td>
-            <td>{item.age}</td>
-            <td>{item.gender}</td>
+            <td className={styles.td}>{item.name}</td>
+            <td className={styles.td}>{item.age}</td>
+            <td className={styles.td}>{item.gender}</td>
           </tr>
         ))}
       </table>

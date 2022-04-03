@@ -28,6 +28,7 @@ export default function App() {
         {/* props.children in react */}
         <Parent />
       </div>
+      {/* /** * * * **/}
       <TableCrud />
     </>
   );

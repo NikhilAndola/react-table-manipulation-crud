@@ -10,21 +10,24 @@ export const TableComp = ({ data, comp }) => {
     <>
       {comp}
       <table className={styles.table}>
-        <tr>
-          <th className={clsx(styles.bgClr, { [styles.textClr]: txtB })}>
-            Name
-          </th>
-          <th>Age</th>
-          <th>Gender</th>
-        </tr>
-
-        {data.map((item, index) => (
-          <tr key={index}>
-            <td className={styles.td}>{item.name}</td>
-            <td className={styles.td}>{item.age}</td>
-            <td className={styles.td}>{item.gender}</td>
+        <thead>
+          <tr>
+            <th className={clsx(styles.bgClr, { [styles.textClr]: txtB })}>
+              Name
+            </th>
+            <th>Age</th>
+            <th>Gender</th>
           </tr>
-        ))}
+        </thead>
+        <tbody>
+          {data.map((item, index) => (
+            <tr key={index}>
+              <td className={styles.td}>{item.name}</td>
+              <td className={styles.td}>{item.age}</td>
+              <td className={styles.td}>{item.gender}</td>
+            </tr>
+          ))}
+        </tbody>
       </table>
     </>
   );

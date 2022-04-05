@@ -71,9 +71,15 @@ export const TableCrud = () => {
       phoneNumber: editFormData.phoneNumber,
       email: editFormData.email,
     };
-  };
+    const newContacts = [...contacts];
 
-  const newContacts = [...contacts];
+    const index = contacts.findIndex((contact) => contact.id === editContactId);
+
+    newContact[index] = editedContact;
+
+    setContacts(newContacts);
+    setEditContactId(null);
+  };
 
   const handleEditClick = (event, contact) => {
     event.preventDefault();
@@ -93,7 +99,7 @@ export const TableCrud = () => {
     <>
       <h2>Making table crud app</h2>
       <div className={styles.appContainer}>
-        <form>
+        <form onSubmit={handleEditFormSubmit}>
           <table className={styles.table}>
             <thead>
               <tr>
